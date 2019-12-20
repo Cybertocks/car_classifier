@@ -210,11 +210,8 @@ path = Path(__file__).parent
 
 app = Starlette()
 app.add_middleware(CORSMiddleware, allow_origins=['*'], allow_headers=['X-Requested-With', 'Content-Type'])
-<<<<<<< HEAD
+
 app.mount('/static', StaticFiles(directory='app/static'))
-=======
-app.mount('/static', StaticFiles(directory='static/'))
->>>>>>> 22e92e27d0587d17da0429cfe46d41832ba7f6a7
 
 async def download_file(url, dest):
     if dest.exists(): return
